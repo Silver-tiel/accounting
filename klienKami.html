@@ -16,6 +16,17 @@
         .bg-primary { background-color: #FF6600; }
         .wa-btn { background-color: #25d366; }
         .wa-btn:hover { background-color: #128c7e; }
+        .extra-item {
+            display: none !important;
+        }
+        .extra-item.show {
+            display: flex !important;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 
@@ -33,25 +44,542 @@
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-800">Klien dan Rekanan Kami</h2>
             <p class="text-gray-600 mt-2">Kami melayani berbagai entitas mulai dari BLUD, instansi pemerintah, BUMD, hingga perusahaan swasta nasional.</p>
+            <div class="w-24 h-1 mx-auto mt-4 rounded-full" style="background-color: #FF8B3D;"></div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
-            <div class="p-6 bg-gray-50 border border-gray-100 rounded-xl text-center font-bold text-gray-700 hover:shadow-md transition">
-                Badan Layanan Umum Daerah (BLUD)
+        <!-- Ringkasan Kategori -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div class="p-5 rounded-2xl text-center text-white font-bold shadow-md" style="background: linear-gradient(135deg,#FF6600,#FF8B3D);">
+                <div class="text-3xl mb-2">🏥</div>
+                <div>Badan Layanan Umum</div>
+                <div class="text-sm font-normal mt-1 opacity-90">34 Entitas</div>
             </div>
-            <div class="p-6 bg-gray-50 border border-gray-100 rounded-xl text-center font-bold text-gray-700 hover:shadow-md transition">
-                Instansi Pemerintah &amp; Kementerian
+            <div class="p-5 rounded-2xl text-center text-white font-bold shadow-md" style="background: linear-gradient(135deg,#FF8B3D,#FFAF7A);">
+                <div class="text-3xl mb-2">💧</div>
+                <div>Perusahaan Umum Daerah</div>
+                <div class="text-sm font-normal mt-1 opacity-90">10 Entitas</div>
             </div>
-            <div class="p-6 bg-gray-50 border border-gray-100 rounded-xl text-center font-bold text-gray-700 hover:shadow-md transition">
-                Badan Usaha Milik Daerah (BUMD)
+            <div class="p-5 rounded-2xl text-center text-white font-bold shadow-md" style="background: linear-gradient(135deg,#FF6600,#FF8B3D);">
+                <div class="text-3xl mb-2">🏫</div>
+                <div>Yayasan &amp; Lembaga</div>
+                <div class="text-sm font-normal mt-1 opacity-90">15 Entitas</div>
             </div>
-            <div class="p-6 bg-gray-50 border border-gray-100 rounded-xl text-center font-bold text-gray-700 hover:shadow-md transition">
-                Perusahaan Swasta &amp; UMKM
+            <div class="p-5 rounded-2xl text-center text-white font-bold shadow-md" style="background: linear-gradient(135deg,#FF8B3D,#FFAF7A);">
+                <div class="text-3xl mb-2">🏢</div>
+                <div>Perusahaan Swasta</div>
+                <div class="text-sm font-normal mt-1 opacity-90">44 Entitas</div>
             </div>
         </div>
+
+        <!-- A. BADAN LAYANAN UMUM -->
+        <div class="mb-14">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background-color:#FF6600;">A</div>
+                <h3 class="text-2xl font-bold text-gray-800">Badan Layanan Umum</h3>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" data-category="A">
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">1</span>
+                    <span class="text-gray-700 text-sm font-medium">BLU – Rumah Sakit Bhayangkara Kendari</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">2</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD Bahteramas Provinsi Sulawesi Tenggara</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">3</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD Kota Kendari</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">4</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD Kabupaten Wakatobi</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">5</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD H.M. Djafar Harun Kabupaten Kolaka Utara</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">6</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD Kabupaten Kolaka</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">7</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD dr. H. L.M. Baharuddin, M.Kes Kabupaten Muna</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">8</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD Kabupaten Konawe Selatan</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">9</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – RSUD Kabupaten Konawe Utara</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">10</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Andoolo Utama</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">11</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Atari Jaya</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">12</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Kolono</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">13</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Konda</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">14</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Lameuru</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">15</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Landono</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">16</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Moramo</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">17</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Motaha</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">18</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Mowila</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">19</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Palangga</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">20</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Pamandati</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">21</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Punggaluku</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">22</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Ranomeeto</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">23</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Tinanggea</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">24</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Wolasi</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">25</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Baula</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">26</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Kolaka</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">27</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Kukutio</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">28</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Polinggona</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">29</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Pomalaa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">30</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Tanggetada</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">31</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Toari</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">32</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Watubangga</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">33</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Wolo</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">34</span>
+                    <span class="text-gray-700 text-sm font-medium">BLUD – UPTD Puskesmas Wundulako</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- B. PERUSAHAAN UMUM DAERAH -->
+        <div class="mb-14">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background-color:#FF6600;">B</div>
+                <h3 class="text-2xl font-bold text-gray-800">Perusahaan Umum Daerah</h3>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" data-category="B">
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">1</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Air Minum Tirta Wakatobi</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">2</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Air Minum Tirta Sugi Laende</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">3</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Air Minum Tirta Moico Kabupaten Bombana</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">4</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Air Minum Tirta Anoa Kota Kendari</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">5</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Air Minum Kabupaten Konawe</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">6</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Air Minum Tirta Simbune</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">7</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Air Minum Tirta Aopa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">8</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Kanturu Molagina Buton Selatan</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">9</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Konasara</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">10</span>
+                    <span class="text-gray-700 text-sm font-medium">Perusahaan Umum Daerah Utama Sultra</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- C. YAYASAN / LEMBAGA -->
+        <div class="mb-14">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background-color:#FF6600;">C</div>
+                <h3 class="text-2xl font-bold text-gray-800">Yayasan / Lembaga &amp; Badan</h3>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" data-category="C">
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">1</span>
+                    <span class="text-gray-700 text-sm font-medium">Yayasan Wakaf Universitas Muslim Indonesia</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">2</span>
+                    <span class="text-gray-700 text-sm font-medium">Universitas Muhammadiyah Kendari</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">3</span>
+                    <span class="text-gray-700 text-sm font-medium">Yayasan STIMIK Bina Bangsa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">4</span>
+                    <span class="text-gray-700 text-sm font-medium">Badan Amil Zakat Nasional Kota Kendari</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">5</span>
+                    <span class="text-gray-700 text-sm font-medium">Badan Amil Zakat Nasional Kabupaten Konawe Kepulauan</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">6</span>
+                    <span class="text-gray-700 text-sm font-medium">Badan Amil Zakat Nasional Provinsi Sulawesi Tenggara</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">7</span>
+                    <span class="text-gray-700 text-sm font-medium">Badan Amil Zakat Nasional Kabupaten Kolaka</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">8</span>
+                    <span class="text-gray-700 text-sm font-medium">LAZIS Muad'z</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">9</span>
+                    <span class="text-gray-700 text-sm font-medium">Koperasi Simpan Pinjam Karyawan Antam Pomalaa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">10</span>
+                    <span class="text-gray-700 text-sm font-medium">Koperasi Simpan Pinjam Zaitun Dana Lestari Baling</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">11</span>
+                    <span class="text-gray-700 text-sm font-medium">Koperasi Simpan Pinjam Karya Gemilang</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">12</span>
+                    <span class="text-gray-700 text-sm font-medium">Koperasi Simpan Pinjam Onion Kendari</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">13</span>
+                    <span class="text-gray-700 text-sm font-medium">Koperasi Kencana Mukti</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">14</span>
+                    <span class="text-gray-700 text-sm font-medium">Koperasi Bina Sejahtera</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">15</span>
+                    <span class="text-gray-700 text-sm font-medium">Koperasi BMT Al-Mujahirin</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- D. PERUSAHAAN -->
+        <div class="mb-14">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background-color:#FF6600;">D</div>
+                <h3 class="text-2xl font-bold text-gray-800">Perusahaan Swasta</h3>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" data-category="D">
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">1</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Harwin Jaya Barokah Property</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">2</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Delta Sarana Sentosa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">3</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Akar Mas Internasional</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">4</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Alfa Media Adijaya</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">5</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Anoa Multy Energi</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">6</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Tapalosa Cipta Sarana</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">7</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Takdisangka Sukses Bersama</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">8</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Margahayu Mega Utama</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">9</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Swarna Dwipa Property</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">10</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Getraco Timur Persada</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">11</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Djavino Group Indonesia</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">12</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Agfee Jaya Propertindo</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">13</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Mekar Jaya Moramo</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">14</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Ode Karya Konstruksi</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">15</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Mineral Trobos</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">16</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Stebers</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">17</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Karya Baru Berkah Nusantara</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">18</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Unggul Perkasa Internasional</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">19</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Tiga Satria Gemilang</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">20</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Tiara Abadi Sentosa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">21</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Suarindo Utama Raya</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">22</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Sinar Lima Putra</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">23</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Sewaru Utama Mandiri</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">24</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Rafif Putra Perkasa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">25</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Pratama Jaya Properti</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">26</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Pacific Mega Konstruksi</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">27</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Nawasena</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">28</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Mineralindo Berkah Semesta</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">29</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Lintas Stone Mineral</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">30</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Lentera Bukit Wolio Indah</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">31</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Lagaligo Putra Perkasa</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">32</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Karya Syarnis Pratama</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">33</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Karuniya Data Konsultan</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">34</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Kania Maju Persada</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">35</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Indonesia Bin Yusuf</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">36</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Kabaena Listari Utama</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">37</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Jona Tira Persada</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">38</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Ihsan Data Konsultan</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">39</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Gihon Marista</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">40</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Fajar Rezkky Pratama</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">41</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Fadia Hayya Makmur</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">42</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Duta Listrik</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">43</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Daya Utama Papua Selatan</span>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-orange-50 border border-orange-100 rounded-xl hover:shadow-md transition-all duration-200">
+                    <span class="min-w-[28px] h-7 rounded-full flex items-center justify-center text-white text-xs font-bold" style="background-color:#FF6600;">44</span>
+                    <span class="text-gray-700 text-sm font-medium">PT. Bintang Pratama Nasional</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Klien -->
+        <div class="text-center py-10 mt-4 rounded-2xl" style="background: linear-gradient(135deg,#FF6600,#FFAF7A);">
+            <p class="text-white text-xl font-bold">Total Klien &amp; Rekanan</p>
+            <p class="text-white text-5xl font-extrabold mt-2">103+</p>
+            <p class="text-white/90 mt-2">Entitas yang telah mempercayakan layanan profesional kepada kami</p>
+        </div>
+
     </main>
 
     <div id="footer-container"></div>
     <script src="js/layout.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const grids = document.querySelectorAll('[data-category]');
+
+            grids.forEach(function (grid) {
+                const items = Array.from(grid.children);
+
+                // Sembunyikan item ke-4 dst
+                items.forEach(function (item, index) {
+                    if (index >= 3) {
+                        item.classList.add('extra-item');
+                    }
+                });
+
+                const hiddenCount = items.length - 3;
+                if (hiddenCount <= 0) return;
+
+                // Buat tombol di LUAR grid (setelah grid)
+                const btn = document.createElement('button');
+                btn.innerHTML = '&#x25BC; Lihat ' + hiddenCount + ' lainnya';
+                btn.className = 'mt-4 px-6 py-2 rounded-full text-white text-sm font-semibold shadow hover:shadow-md transition-all duration-200';
+                btn.style.background = 'linear-gradient(135deg,#FF6600,#FF8B3D)';
+                btn.style.display = 'block';
+                btn.style.margin = '16px auto 0';
+
+                let expanded = false;
+                btn.addEventListener('click', function () {
+                    expanded = !expanded;
+                    items.forEach(function (item, index) {
+                        if (index >= 3) {
+                            if (expanded) {
+                                item.classList.add('show');
+                            } else {
+                                item.classList.remove('show');
+                            }
+                        }
+                    });
+                    btn.innerHTML = expanded
+                        ? '&#x25B2; Tutup'
+                        : '&#x25BC; Lihat ' + hiddenCount + ' lainnya';
+                });
+
+                // Sisipkan tombol setelah grid, bukan di dalam grid
+                grid.parentNode.insertBefore(btn, grid.nextSibling);
+            });
+        });
+    </script>
 </body>
 </html>
