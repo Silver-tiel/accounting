@@ -1,6 +1,6 @@
 <?php
 // Tentukan halaman aktif. Set $activePage di file pemanggil SEBELUM melakukan include.
-// Contoh di home.php:   $activePage = 'home';  include 'header dan footer/header.php';
+// Contoh di index.php:   $activePage = 'home';  include 'header dan footer/header.php';
 if (!isset($activePage)) {
     $activePage = '';
 }
@@ -119,7 +119,7 @@ function navStyle($key, $activePage)
         <nav
             class="relative max-w-7xl w-full flex flex-wrap lg:grid lg:grid-cols-12 basis-full items-center px-4 md:px-6 lg:px-8 mx-auto">
             <div class="lg:col-span-3 flex items-center">
-                <a class="flex-none rounded-xl text-xl inline-block font-semibold" href="home.php">
+                <a class="flex-none rounded-xl text-xl inline-block font-semibold" href="index.php">
                     <span class="text-2xl font-bold" style="color: #FF6600;">KAP <span
                             style="color: #FF8B3D;">ISHAK</span></span>
                 </a>
@@ -148,7 +148,7 @@ function navStyle($key, $activePage)
                 <div
                     class="flex flex-col gap-y-4 gap-x-0 mt-5 pb-4 lg:pb-0 lg:flex-row lg:justify-center lg:items-center lg:gap-y-0 lg:gap-x-5 lg:mt-0">
                     <a class="<?php echo navClass('home', $activePage); ?>"
-                        style="<?php echo navStyle('home', $activePage); ?>" href="home.php">Home</a>
+                        style="<?php echo navStyle('home', $activePage); ?>" href="index.php">Home</a>
                     <a class="<?php echo navClass('about', $activePage); ?>"
                         style="<?php echo navStyle('about', $activePage); ?>" href="tentangKami.php">About Us</a>
                     <a class="<?php echo navClass('news', $activePage); ?>"

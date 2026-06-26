@@ -23,7 +23,7 @@
             <ul class="text-center lg:text-right">
                 <li
                     class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
-                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-white" href="home.php">Home</a>
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-white" href="index.php">Home</a>
                 </li>
                 <li
                     class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
