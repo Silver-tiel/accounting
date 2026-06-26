@@ -1,0 +1,79 @@
+<!-- WA BUTTON -->
+<a href="https://wa.me/62811466551" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-20 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full text-white shadow-lg transition-all duration-300 hover:scale-105"
+    style="background-color: #25d366;" onmouseover="this.style.backgroundColor='#128c7e'"
+    onmouseout="this.style.backgroundColor='#25d366'" aria-label="Chat via WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-6 h-6"
+        viewBox="0 0 16 16">
+        <path
+            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232">
+        </path>
+    </svg>
+</a>
+
+<!-- FOOTER -->
+<div style="background-color: #FF6600;">
+    <footer class="mt-auto w-full max-w-screen-xl py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
+            <div>
+                <p class="text-xs text-gray-200 text-center lg:text-left">&copy;
+                    <?php echo date('Y'); ?> Kantor Akuntan Publik Ishak Awaluddin, Ak., CA., CPA.
+                </p>
+            </div>
+            <ul class="text-center lg:text-right">
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-white" href="home.php">Home</a>
+                </li>
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-white" href="tentangKami.php">About
+                        Us</a>
+                </li>
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-white"
+                        href="jasaLayanan.php">Services</a>
+                </li>
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-white"
+                        href="Pengalaman.php">Pengalaman</a>
+                </li>
+                <li
+                    class="inline-block relative pe-8 last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300">
+                    <a class="inline-flex gap-x-2 text-sm text-gray-200 hover:text-white" href="kontak.php">Contact
+                        Us</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Mobile menu toggle (elemen berasal dari header.php)
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+            const isOpen = !menu.classList.contains('hidden');
+            if (isOpen) {
+                menu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            } else {
+                menu.classList.remove('hidden');
+                iconOpen.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+            }
+        });
+    }
+</script>
+<?php if (isset($extraScript)) {
+    echo $extraScript;
+} ?>
+</body>
+
+</html>
